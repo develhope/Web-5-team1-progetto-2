@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter,Routes, Route } from "react-router-dom";
 import { OnboardingProvider } from "./context/stepContexst";
 import Button from './components/InterfacciaUtente/button'
 import { useState } from 'react';
@@ -13,6 +13,8 @@ import { Match } from "./components/layout/Match";
 import { FilmCard } from "./servizi/FilmCard";
 import { SerieCard } from "./servizi/SerieCard";
 import { Lista } from "./servizi/Lista";
+import { AccountTab } from "./servizi/accountTab";
+//import { AccountTab } from "./servizi/accountTab";
 
 function App() {
   const [userProfile, setUserProfile] = useState({})
@@ -37,6 +39,7 @@ function App() {
                    <Route path="/film" element={<FilmCard />} />
                    <Route path="/serie-tv" element={<SerieCard />} />
                    <Route path="/la-mia-lista" element={<Lista />} />
+                   <Route path="/account" element={<AccountTab/>}> </Route>
                 </Routes>
             </div>
         </OnboardingProvider>

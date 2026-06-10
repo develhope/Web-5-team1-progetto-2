@@ -125,6 +125,17 @@ export function StepFilmCuore() {
 
                     {risultatiAPI.length > 0 && (
                         <div className="absolute left-0 right-0 top-[68px] z-50 bg-[#0b0411] border border-gray-800 rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.8)]">
+                               <button
+                                   type="button"
+                                    onClick={() => {
+                                    setRisultatiAPI([]);
+                                    setRicerca("");
+                                    }}
+                                     className="w-full text-right px-4 py-2 text-xs font-bold text-gray-500 hover:text-cyan-400"
+                                    >
+                                    CHIUDI ×
+                                  </button> 
+
                             {risultatiAPI.map((film) => (
                                 <button
                                     key={film.id}
